@@ -6,6 +6,9 @@
 
 #include "Arduino.h"
 
+#define SoundInput_AREF 0
+#define SoundInput_AVCC 1
+#define SoundInput_INTERNAL 3
 
 #ifndef SoundInput_cpp //Needed in application
 int _adc_data;
@@ -24,7 +27,7 @@ class SoundInput //Needed in SoundInput.cpp
 {
 	public:
 		SoundInput( void (*function)(int) );
-		void begin();	
+		void begin(int);	
 	private:
 	
 };

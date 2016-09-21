@@ -9,7 +9,7 @@ SoundInput Sound=SoundInput(&putBuffer);
 
 void setup()
 {
-  Sound.begin();
+  Sound.begin(SoundInput_AREF);
   Serial.begin(115200);
 }
 

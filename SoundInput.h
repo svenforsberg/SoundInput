@@ -17,7 +17,7 @@ void (*_isr_func)(int);
 	ISR(ADC_vect) 
 	{
 		_adc_data = ADCW;
-		_adc_data-=512;
+		_adc_data-=511;
 		_isr_func(_adc_data);
 	}
 #endif
